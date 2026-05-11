@@ -1,10 +1,11 @@
 'use client';
 
 import { Toaster } from 'sonner';
+import { AiProviderWrapper } from '@/contexts/AiProviderContext';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <AiProviderWrapper>
       {children}
       <Toaster
         position="bottom-right"
@@ -17,6 +18,6 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           },
         }}
       />
-    </>
+    </AiProviderWrapper>
   );
 }

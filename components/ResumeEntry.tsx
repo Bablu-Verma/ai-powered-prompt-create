@@ -6,6 +6,7 @@ import { Wand2, Loader2, ExternalLink, Trash2, Copy, Edit3, X as XIcon, Check } 
 import { toast } from 'sonner';
 import { buildPrompt, DEFAULT_TEMPLATE } from '@/utils/promptBuilder';
 import type { Entry } from '@/hooks/useMultiResume';
+import { useAiProvider } from '@/contexts/AiProviderContext';
 
 interface ResumeEntryProps {
   entry: Entry;
@@ -19,6 +20,7 @@ export default function ResumeEntry({ entry, onResumeTextChange, onJobDescriptio
   const [isGenerating, setIsGenerating] = useState(false);
   const [showEditor, setShowEditor] = useState(false);
   const [editTemplate, setEditTemplate] = useState('');
+  const { selectedProvider } = useAiProvider();
 
   const openEditor = () => {
     setEditTemplate(entry.promptTemplate || DEFAULT_TEMPLATE);
@@ -58,12 +60,12 @@ export default function ResumeEntry({ entry, onResumeTextChange, onJobDescriptio
       await navigator.clipboard.writeText(prompt);
 
       toast.success('Prompt copied to clipboard!', {
-        description: 'Opening ChatGPT...',
+        description: `Opening ${selectedProvider.name}...`,
         icon: <Copy className="w-4 h-4" />,
       });
 
       setTimeout(() => {
-        window.open('https://chatgpt.com/', '_blank');
+        window.open(selectedProvider.url, '_blank');
         setIsGenerating(false);
       }, 1000);
     } catch (err) {

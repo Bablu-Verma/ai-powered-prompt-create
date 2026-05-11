@@ -1,8 +1,10 @@
 'use client';
 
-import { Brain } from 'lucide-react';
+import { Brain, Globe } from 'lucide-react';
 
 export default function Header() {
+
+
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,6 +16,7 @@ export default function Header() {
             <span className="text-lg font-bold text-white">ResumeAI</span>
           </div>
           <nav className="flex items-center gap-6">
+           
             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Home</a>
             <a href="#entries" className="text-sm text-gray-400 hover:text-white transition-colors">Entries</a>
           </nav>

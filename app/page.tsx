@@ -5,10 +5,12 @@ import Footer from '@/components/Footer';
 import ResumeEntry from '@/components/ResumeEntry';
 import { useMultiResume } from '@/hooks/useMultiResume';
 import { Plus, ArrowDown, Sparkles } from 'lucide-react';
+import { Brain, Globe } from 'lucide-react';
+import { useAiProvider } from '@/contexts/AiProviderContext';
 
 export default function Home() {
   const { entries, addEntry, removeEntry, setResumeText, setJobDescription, setPromptTemplate } = useMultiResume();
-
+  const { selectedProvider, setSelectedProviderId, providers } = useAiProvider();
   return (
     <>
       <Header />
@@ -39,6 +41,21 @@ export default function Home() {
       </section>
 
       <section id="entries" className="py-10 relative flex-1">
+        <div className='max-w-6xl pb-10 mx-auto px-4 sm:px-6 lg:px-8'>
+    <div className="relative max-w-[160px]  text-white">
+              <select
+                value={selectedProvider.id}
+                onChange={(e) => setSelectedProviderId(e.target.value)}
+                className="appearance-none w-full bg-surface border border-white/10 rounded-lg pl-3 pr-8 py-1.5 text-sm text-gray-300 focus:outline-none focus:border-primary/50 cursor-pointer"
+              >
+                {providers.map((p) => (
+                  <option key={p.id} value={p.id}>{p.name}</option>
+                ))}
+              </select>
+              
+            </div>
+        </div>
+        
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           {entries.map((entry) => (
             <ResumeEntry
