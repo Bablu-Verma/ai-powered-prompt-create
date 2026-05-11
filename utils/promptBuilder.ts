@@ -33,6 +33,10 @@ Analyze the resume against the job description.
 Include:
 - ATS Match Percentage
 
+Provide realistic evaluation based on actual alignment.
+
+Do NOT inflate ATS score unrealistically.
+
 ==================================================
 
 # 2. ATS-OPTIMIZED RESUME REBUILD
@@ -47,12 +51,16 @@ Requirements:
 - Add ATS keywords naturally
 - Keep formatting modern and clean
 - Improve recruiter readability
+- Improve clarity and impact
+- Optimize for ATS parsing
 
 Rules:
 - Do NOT invent fake experience
 - Do NOT invent fake projects
 - Do NOT invent fake achievements
+- Do NOT invent fake technical skills
 - Keep claims realistic
+- Preserve factual accuracy
 - Return text-only resume content
 
 ==================================================
@@ -70,6 +78,7 @@ Requirements:
 - explain why the candidate fits the role
 - avoid robotic wording
 - avoid generic template language
+- modern recruiter-friendly tone
 
 Rules:
 - Do NOT invent fake achievements
@@ -80,22 +89,34 @@ Rules:
 
 # 4. JOB APPLICATION EMAIL
 
+Using the generated cover letter:
+
 Generate:
 - professional subject line
-- personalized recruiter-ready email
+- concise recruiter-ready email version derived from the cover letter
 
 Requirements:
-- concise
+- shorter than the cover letter
+- preserve core personalization
+- recruiter-friendly
+- concise and professional
 - technically credible
 - role-specific
-- human-sounding
-- non-generic
+- natural and human-sounding
+- avoid generic wording
 
 If recruiter email exists in the JD:
 - generate clickable mailto link
 - prefill subject
 - prefill email body
 - properly URL encode the link
+
+Rules:
+- Do NOT invent fake achievements
+- Do NOT invent fake experience
+- Keep all claims realistic and resume-supported
+- Do NOT generate completely new content
+- Reuse and adapt the cover letter naturally
 
 Example:
 mailto:hr@company.com?subject=Application%20for%20Frontend%20Developer&body=Hello...
@@ -104,19 +125,31 @@ mailto:hr@company.com?subject=Application%20for%20Frontend%20Developer&body=Hell
 
 # 5. WHATSAPP MESSAGE
 
-Generate a short recruiter-friendly WhatsApp message.
+Using the generated cover letter:
+
+Generate:
+- short recruiter-friendly WhatsApp version
 
 Requirements:
-- concise
-- natural
+- 2–4 lines maximum
+- concise and natural
+- derived from the cover letter
 - technically credible
 - role-specific
+- professional but conversational
 
 If phone number exists in the JD:
 - generate clickable WhatsApp link
 - clean the phone number
 - include country code if available
 - URL encode the message
+
+Rules:
+- Do NOT invent fake achievements
+- Do NOT invent fake experience
+- Keep all claims realistic and resume-supported
+- Do NOT generate completely new content
+- Reuse and shorten the cover letter naturally
 
 Example:
 https://wa.me/919999999999?text=Hello%20I%20am%20interested%20in%20the%20role
@@ -135,6 +168,27 @@ Include:
 - Job Location
 
 Only use contact details explicitly present in the job description.
+
+If information is unavailable:
+- explicitly mention "Not Provided"
+
+==================================================
+
+# OUTPUT FORMAT
+
+Return clean markdown with proper section headings.
+
+Use:
+- concise formatting
+- recruiter-friendly readability
+- professional structure
+- bullet points where appropriate
+
+Avoid:
+- unnecessary explanations
+- AI disclaimers
+- repetitive phrasing
+- excessive verbosity
 
 ==================================================
 
@@ -164,6 +218,7 @@ Prioritize:
 - recruiter psychology
 - shortlist probability
 - realistic hiring standards
+- hiring manager readability
 
 Tailor everything specifically to the provided job description.
 `;

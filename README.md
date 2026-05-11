@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResumeAI 🚀
 
-## Getting Started
+**Live:** https://ai-powered-prompt-create.vercel.app/
 
-First, run the development server:
+ResumeAI ek AI-powered career assistant hai jo job seekers ki **resume optimization, cover letter generation, aur interview prep** mein madad karta hai.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Ye kya karta hai?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ek hi click me AI ke liye optimized prompt generate karta hai jo ye sab produce karta hai:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Feature | Description |
+|---------|-------------|
+| **ATS Analysis** | Resume ka job description se match percentage batata hai |
+| **ATS-Optimized Resume** | Resume ko specific job ke liye rewrite karta hai (keywords + formatting) |
+| **Cover Letter** | Personalized professional cover letter |
+| **Job Application Email** | Recruiter-ready email with mailto link |
+| **WhatsApp Message** | Short recruiter-friendly message with WhatsApp link |
+| **Contact Summary** | JD se recruiter details extract karta hai |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Kaise use karein?
 
-## Learn More
+1. Koi bhi **AI provider** choose karo (ChatGPT, DeepSeek, Gemini, Claude, Grok, Perplexity, Arena.Ai)
+2. Apna **resume text** paste karo
+3. **Job description** paste karo
+4. **Generate Prompt** dabao — prompt clipboard mein copy hoga aur AI provider auto-open hoga
+5. AI provider mein paste karo aur results dekho
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Multiple Entries** — ek saath multiple jobs ke liye entries add karo
+- **Custom Prompt Template** — default prompt ko edit bhi kar sakte ho
+- **7+ AI Providers** — apni pasand ka AI model choose karo
+- **Fake Info Nahi** — sirf diye gaye resume ke facts use karta hai, kuch invent nahi karta
+- **Dark UI** — modern, clean, recruiter-friendly design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Notifications:** Sonner
